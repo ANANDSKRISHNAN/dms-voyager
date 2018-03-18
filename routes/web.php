@@ -14,8 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('/send/mail/', 'MailController@sendMail');
 
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
